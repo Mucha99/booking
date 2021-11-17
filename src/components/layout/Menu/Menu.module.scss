@@ -1,4 +1,30 @@
 @import '../../../styles/settings.scss';
+@import '../../../styles/global.scss';
 
+.menu {
+    background-color: $color-white;
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding: 10px 40px;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0px 4px rgba(0, 0, 0, 0.3);
 
+    span {
+        color: $color-dark-blue;
+    }
+    
+    .navigation {
+        position: relative;
+        text-transform: uppercase;
+
+        a {
+            font-weight: 300;
+            margin-left: 30px;
+            text-decoration: none;
+            color: $color-black;
+        }
+    }
+}
 

@@ -4,9 +4,12 @@ import Searchbar from '../../common/Searchbar/Searchbar';
 
 function Header( ) {
     return (
-      <header className={styles.header}>
+      <div className={styles.container}>
+        <header className={styles.header}>
           <Searchbar />
-      </header>
+        </header>
+      </div>
+      
     )
 }
 
