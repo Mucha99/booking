@@ -5,8 +5,8 @@ import Hotels from "./components/views/Hotels/Hotels";
 function App() {
   return (
     <div className="App">
-      <Header />
       <Menu />
+      <Header />
       <Hotels />
     </div>
   );
