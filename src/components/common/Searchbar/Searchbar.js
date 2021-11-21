@@ -1,12 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './Searchbar.module.scss';
 
 function Searchbar() {
+    const [term, setTerm] = useState('');
+
+    const search = () => {
+        console.log('Szukaj...', term);
+    }
+
+    const onKeyDownHandler = (e) => {
+        if (e.key === 'Enter') {
+            search();
+        }
+    }
+
     return (
         <div className={styles.search}>
-            <button className={styles.icon}><i class="fas fa-search"></i></button>
+            <button 
+                className={styles.icon} 
+                onClick={search}
+            >
+                <i class="fas fa-search"></i>
+            </button>
             <div className={styles.inputBox}>
                 <input 
+                    value={term}
+                    onChange={e => setTerm(e.target.value) }
+                    onKeyDown={onKeyDownHandler}
                     type='text' 
                     placeholder='Search...' 
                     className={styles.searchInput}
