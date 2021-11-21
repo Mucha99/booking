@@ -8,9 +8,7 @@ class Hotels extends React.Component {
       <div className={styles.container}>
         <div className={styles.hotels}>
           <h1 className={styles.title}>Time for adventure !</h1>
-          <Hotel />
-          <Hotel />
-          <Hotel />
+          {this.props.hotels.map(hotel => <Hotel key={hotel.id} {... hotel} />)}
         </div>
       </div>
       
