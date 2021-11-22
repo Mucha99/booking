@@ -1,16 +1,25 @@
 import React from 'react';
 import styles from './Hotel.module.scss';
+import PropTypes from 'prop-types';
+
+const propTypes = {
+    image: PropTypes.string,
+    name: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+    more: PropTypes.string,
+    rating: PropTypes.number,
+}; 
 
 function Hotel(props) {
     return (
         <div className={styles.hotel}>
             <div className={styles.image}>
-                <img src='https://inspirander.pl/images/EKSKLUZYWNY-HOTEL-SANTORINI-GRACE-SANTORINI-1.png' alt='hotel'/>
+                <img src={props.image} alt='hotel'/>
             </div>
             <div className={styles.info}>
-                <h3>{props.title}</h3>
+                <h3>{props.name}</h3>
                 <p>
-                    <i class="fas fa-map-marker-alt"></i> {props.name}
+                    <i class="fas fa-map-marker-alt"></i> {props.location}
                 </p>
                 <ul>
                     <li>2 bedroom</li>
@@ -29,4 +38,6 @@ function Hotel(props) {
     )
 }
 
+Hotel.propTypes = propTypes;
+ 
 export default Hotel;

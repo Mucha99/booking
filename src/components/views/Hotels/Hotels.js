@@ -1,6 +1,11 @@
 import React from 'react';
 import Hotel from '../Hotel/Hotel';
 import styles from './Hotels.module.scss';
+import PropTypes from 'prop-types';
+
+const propTypes = {
+  hotels: PropTypes.array.isRequired
+};
 
 class Hotels extends React.Component {
   render() {
@@ -15,5 +20,7 @@ class Hotels extends React.Component {
     );
   }
 }
+
+Hotels.propTypes = propTypes;
 
 export default Hotels;

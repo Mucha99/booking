@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
 import styles from './Searchbar.module.scss';
+import PropTypes from 'prop-types';
+
+const propTypes = {
+    onSearch: PropTypes.func.isRequired
+};
 
 function Searchbar(props) {
     const [term, setTerm] = useState('');
@@ -35,5 +40,7 @@ function Searchbar(props) {
         </div>
     )
 }
+
+Searchbar.propTypes = propTypes;
 
 export default Searchbar; 
