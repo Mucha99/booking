@@ -8,6 +8,7 @@ const propTypes = {
     location: PropTypes.string.isRequired,
     more: PropTypes.string,
     rating: PropTypes.number,
+    price: PropTypes.number,
 }; 
 
 function Hotel(props) {
@@ -30,7 +31,7 @@ function Hotel(props) {
             <div className={styles.more}>
                 <div>
                     <h5>Rating: <spam>{props.rating}</spam></h5>
-                    <p>220$/night</p>
+                    <p>{props.price}$/night</p>
                 </div>
                 <button>Show more</button>
             </div>
